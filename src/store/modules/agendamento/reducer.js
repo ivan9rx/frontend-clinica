@@ -7,6 +7,7 @@ function agendamento(state = INITAL_STATE, action) {
         case '@agendamento/ALL': {
             ////
         }
+        
         default: return state;
     }
 }
