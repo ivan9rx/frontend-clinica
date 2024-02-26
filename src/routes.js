@@ -1,8 +1,12 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 import Header from "./components/header";
-import SideBar from "./components/sidebar";
+import Sidebar from "./components/sidebar";
+import Agendamentos from './pages/agendamentos';
+import Clientes from './pages/clientes';
+
+
 
 import './styles.css';
 
@@ -11,12 +15,15 @@ import './styles.css';
 const Routes = () => {
     return (
         <>
-
-            <div className="container-fluid h-1oo">
+            <Header/>
+            <div className="container-fluid h-1oo" >
                 <div className="row h-100">
                     <Router>
-                        <SideBar/>
-
+                        <Sidebar />
+                        <Switch>
+                            <Route path="/" exact component={Agendamentos} />
+                            <Route path="/clientes" exact component={Clientes} />
+                        </Switch>
                     </Router>
                 </div>
             </div>

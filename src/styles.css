@@ -1,5 +1,60 @@
+:root {
+    --primary: #7b2cbf;
+    --dark: #21232f;
+    --danger: #d62828;
+    --sucess: #06d6a0;
+    --white: #f5f6f7;
+}
+
+
 #root {
     height: 100%;
     width: 100%;
     position: fixed;
 }
+
+
+
+
+header {
+    background-color: var(--primary);
+}
+
+header > div {
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 20px;
+    text-align: right;
+    
+}
+
+header > div:hover {
+    background-color: rgba(0, 0, 0.2);
+}
+
+header img {
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+#side {
+    background-color: var(--dark)
+}
+
+#side ul li {
+    list-style: none;
+    width: 100%
+}
+
+#side ul li a {
+    width: 100%;
+    color: #fff;
+    opacity: 0.6;
+    display: flex;
+    pad: 5px 0;
+    margin: 2.5px 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
